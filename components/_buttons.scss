@@ -1,0 +1,15 @@
+// BUTTONS
+@use "../abstracts/" as *;
+button {
+	background-color: $button-color;
+	border: none;
+	color: $white;
+	border-radius: 7px;
+	a {
+		text-decoration: none;
+	}
+}
+nav button {
+	padding: 0.5rem 0.8rem;
+	margin-left: 2.5rem;
+}

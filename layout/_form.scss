@@ -1,0 +1,128 @@
+@use "../abstracts/" as *;
+.body-inner {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	main.hire {
+		background-color: $primary-color;
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+		.main-inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			form {
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 20rem;
+				max-width: 1100px;
+				@include max-L-laptop {
+					width: 80%;
+				}
+				@include max-S-laptop {
+					width: 88%;
+				}
+				@include max-tablet {
+					padding-bottom: 2rem;
+				}
+				h1 {
+					text-align: center;
+					padding-bottom: 10rem;
+					padding-top: 5rem;
+					font-size: 5rem;
+					color: $secondary-color;
+					@include max-S-laptop {
+						font-size: 4rem;
+						padding-bottom: 7rem;
+					}
+					@include max-tablet {
+						padding-bottom: 1rem;
+						padding-top: 3rem;
+						text-align: left;
+						font-size: 2.2rem;
+					}
+				}
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					padding: 0;
+					@include max-tablet {
+						flex-direction: column;
+					}
+					label {
+						font-size: 1.1rem;
+						font-weight: 600;
+						color: $secondary-color;
+					}
+					li {
+						width: 50%;
+						padding: 0.5rem;
+						display: flex;
+						position: relative;
+						flex-direction: column;
+						justify-content: flex-end;
+						@include max-tablet {
+							width: 100%;
+						}
+						input {
+							width: 100%;
+							padding: 1rem 1.5rem;
+							border-radius: 5px;
+							border: 0;
+							font-style: italic;
+						}
+						select {
+							width: 100%;
+							border-radius: 5px;
+							padding: 1rem 1.5rem;
+							font-weight: 600;
+						}
+						select:hover {
+							cursor: pointer;
+						}
+						.failure-icon,
+						.success-icon {
+							position: absolute;
+							right: 0;
+						}
+						.failure-icon,
+						.success-icon {
+							position: absolute;
+							top: 55%;
+							right: 1rem;
+							transform: translate(-50%, -50%);
+							font-size: 1.2rem;
+							opacity: 0;
+						}
+						.failure-icon {
+							color: $button-color;
+						}
+						.success-icon {
+							color: $success;
+						}
+						.error {
+							height: 1rem;
+							line-height: 1rem;
+							margin-top: 0.2rem;
+							opacity: 1;
+							color: $button-color;
+						}
+						button {
+							width: 100%;
+							padding: 1rem 1.5rem;
+							align-self: flex-end;
+							transition: all 0.3s ease-out;
+							&:hover {
+								background-color: $button-color-hover;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+//Media Queries
+
+// Small Devices
+// ----------------------------
+@mixin max-S-phone {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}
+@mixin min-S-phone {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+@mixin max-M-phone {
+	@media screen and (max-width: 374px) {
+		@content;
+	}
+}
+@mixin min-M-phone {
+	@media screen and (min-width: 374px) {
+		@content;
+	}
+}
+@mixin max-L-phone {
+	@media screen and (max-width: 425px) {
+		@content;
+	}
+}
+@mixin min-L-phone {
+	@media screen and (min-width: 425px) {
+		@content;
+	}
+}
+
+// Medium Devices
+// -------------------------------------
+@mixin max-S-laptop {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin min-S-laptop {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+@mixin max-tablet {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin min-tablet {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+@mixin custom-max-900 {
+	@media screen and (max-width: 900px) {
+		@content;
+	}
+}
+
+// Big Devices
+// ---------------------------
+@mixin max-L-laptop {
+	@media screen and (max-width: 1400px) {
+		@content;
+	}
+}
+@mixin min-L-laptop {
+	@media screen and (min-width: 1400px) {
+		@content;
+	}
+}
+@mixin max-laptop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin min-laptop {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+@mixin custom-min-1345 {
+	@media screen and (min-width: 1345px) {
+		@content;
+	}
+}

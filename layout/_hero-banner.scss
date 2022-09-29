@@ -1,0 +1,174 @@
+// Header
+@use "../abstracts/" as *;
+
+.hero-banner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 75vh;
+	width: 100%;
+	background-color: $secondary-color-08;
+	color: $white;
+	.hero-bg-img {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/bg-1.jpg);
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column-reverse;
+		text-align: center;
+		width: 70%;
+		padding: 2rem;
+		.glitch-wrapper {
+			animation: glitch-appearing 8.05s;
+			h1.glitch {
+				font-size: 5.5rem;
+				font-weight: 600;
+				@include max-L-laptop {
+					font-size: 4.5rem;
+				}
+				@include max-tablet {
+					font-size: 3.5rem;
+				}
+				@include max-M-phone {
+					font-size: 2.7rem;
+				}
+			}
+		}
+		.glitch {
+			text-transform: uppercase;
+			position: relative;
+			text-shadow: 0.05em 0 0 $secondary-color,
+				-0.05em -0.025em 0 $secondary-color, -0.025em 0.05em 0 $secondary-color;
+			animation: glitch 2s infinite;
+		}
+		svg {
+			@include max-L-laptop {
+				max-width: 11rem;
+			}
+
+			@include max-tablet {
+				max-width: 9rem;
+			}
+			overflow: visible;
+			max-width: 12.5rem;
+			.st0 {
+				stroke: #fff;
+				fill: #fff;
+				stroke-dasharray: 4500;
+				opacity: 10;
+				animation: animate 7s cubic-bezier(0.91, 0.37, 0.17, 0.72);
+			}
+		}
+	}
+	@keyframes animate {
+		0% {
+			stroke: $primary-color;
+			stroke-width: 6.5;
+			opacity: 1;
+			fill: rgba($color: #fff, $alpha: 0);
+			stroke-dashoffset: 4500;
+			transform-origin: center;
+		}
+		5% {
+			fill: rgba($color: #fff, $alpha: 0);
+			stroke-dashoffset: 4500;
+			transform-origin: center;
+		}
+		55% {
+			transform: rotate(150deg);
+			transform-origin: center;
+		}
+		70% {
+			transform: scale(1);
+			transform-origin: center;
+		}
+		85% {
+			transform: rotate(360deg);
+			transform-origin: center;
+		}
+		90% {
+			stroke-width: 4;
+			transform: scale(1.5, 1.5);
+			transform-origin: center;
+			fill: rgba(255, 255, 255, 0);
+		}
+		95% {
+			stroke: $white;
+			transform: scale(1);
+			fill: rgba(255, 255, 255, 1);
+		}
+		100% {
+			opacity: 1;
+			transform-origin: center;
+			stroke-dashoffset: 0;
+		}
+	}
+	@keyframes glitch-appearing {
+		0% {
+			opacity: 0%;
+		}
+		80% {
+			opacity: 0%;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes glitch {
+		0% {
+			opacity: 60%;
+			color: $white;
+			text-shadow: 0.05em 0 0 $secondary-color,
+				-0.05em -0.025em 0 $secondary-color, -0.025em 0.05em 0 $secondary-color;
+		}
+		15% {
+			text-shadow: -0.05em -0.025em 0 $secondary-color,
+				0.025em 0.025em 0 $primary-color, -0.05em -0.05em 0 $secondary-color;
+		}
+		20% {
+			text-shadow: 0.05em 0 0 $secondary-color,
+				-0.05em -0.025em 0 $secondary-color, -0.025em 0.05em 0 $secondary-color;
+		}
+		25% {
+			opacity: 60%;
+		}
+		49% {
+			color: $primary-color;
+			opacity: 90%;
+			text-shadow: -0.05em -0.025em 0 $secondary-color,
+				0.025em 0.025em 0 $secondary-color, -0.05em -0.05em 0 $secondary-color;
+		}
+		50% {
+			text-shadow: 0.025em 0.05em 0 $secondary-color,
+				0.05em 0 0 $secondary-color, 0 -0.05em 0 $secondary-color;
+		}
+		65% {
+		}
+		80% {
+			text-shadow: 0.025em 0.05em 0 $secondary-color, 0.05em 0 0 $primary-color,
+				0 -0.05em 0 $secondary-color;
+		}
+		85% {
+			opacity: 100%;
+			text-shadow: -0.025em 0 0 $secondary-color,
+				-0.025em -0.025em 0 $primary-color, -0.025em -0.05em 0 $secondary-color;
+		}
+		100% {
+			text-shadow: -0.025em 0 0 $secondary-color,
+				-0.025em -0.025em 0 $primary-color, -0.025em -0.05em 0 $secondary-color;
+			color: $white;
+			opacity: 80%;
+		}
+	}
+}

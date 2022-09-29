@@ -1,0 +1,14 @@
+// Footer
+@use "../abstracts/" as *;
+footer {
+	text-align: center;
+	font-weight: 500;
+	background-color: $secondary-color;
+	padding: 1rem 0;
+	span {
+		color: $white;
+		i {
+			color: $button-color;
+		}
+	}
+}

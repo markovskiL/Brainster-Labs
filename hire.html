@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BrainsterLabs</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+		<script src="./javaScript/nav.js" defer></script>
+
+		<script
+			src="https://kit.fontawesome.com/54d97c701b.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="body-inner">
+			<nav class="nav-hover navshadow">
+				<div class="brainster-logo">
+					<a href="index.html">
+						<img src="./images/Logo.png" alt="brainster-logo" />
+						<span>Brainster</span>
+					</a>
+				</div>
+				<div class="menu-icon menu-open-icon">
+					<!-- <i class="fa-solid fa-bars-sort"></i> ikonkata e dostapna samo za pro FontAwesome -->
+					<i class="fa-solid fa-bars"></i>
+				</div>
+				<ul id="navigation-elements" data-visible="false">
+					<li>
+						<div class="li-inner">
+							<a href="https://brainster.co/marketing" target="_blank"
+								>Академија за маркетинг</a
+							>
+						</div>
+					</li>
+					<li>
+						<div class="li-inner">
+							<a href="https://brainster.co/front-end/" target="_blank"
+								>Академија за програмирање</a
+							>
+						</div>
+					</li>
+					<li>
+						<div class="li-inner">
+							<a href="https://brainster.co/graphic-design/" target="_blank"
+								>Академија за data science</a
+							>
+						</div>
+					</li>
+					<li>
+						<div class="li-inner">
+							<a href="https://brainster.co/data-science/" target="_blank"
+								>Академија за дизајн</a
+							>
+						</div>
+					</li>
+					<li>
+						<a href="./hire.html"><button>Вработи наш студент</button></a>
+					</li>
+					<li>
+						<div class="menu-icon menu-icon-close">
+							<i class="fa-solid fa-xmark"></i>
+						</div>
+					</li>
+				</ul>
+			</nav>
+
+			<main class="hire">
+				<div class="main-inner">
+					<form id="form">
+						<h1>Вработи студенти</h1>
+						<ul>
+							<li>
+								<label for="name">Име и презиме</label>
+								<input
+									type="text"
+									id="name"
+									placeholder="Вашето име и презиме"
+								/>
+								<i class="fas fa-exclamation-circle failure-icon"></i>
+								<i class="far fa-check-circle success-icon"></i>
+								<div class="error"></div>
+							</li>
+
+							<li>
+								<label for="nameCompany">Име на компанија</label>
+								<input
+									type="text"
+									id="nameCompany"
+									placeholder="Име на вашата компанија"
+								/>
+								<i class="fas fa-exclamation-circle failure-icon"></i>
+								<i class="far fa-check-circle success-icon"></i>
+								<div class="error"></div>
+							</li>
+
+							<li>
+								<label for="email">Контакт е-пошта</label>
+								<input
+									type="email"
+									id="email"
+									placeholder="Е-пошта на вашата компанија"
+								/>
+								<i class="fas fa-exclamation-circle failure-icon"></i>
+								<i class="far fa-check-circle success-icon"></i>
+								<div class="error"></div>
+							</li>
+
+							<li>
+								<label for="phoneNumber">Контакт телефон</label>
+								<input
+									type="tel"
+									id="phoneNumber"
+									placeholder="Контакт телефон на вашата компанија"
+								/>
+								<i class="fas fa-exclamation-circle failure-icon"></i>
+								<i class="far fa-check-circle success-icon"></i>
+								<div class="error"></div>
+							</li>
+
+							<li>
+								<label for="studentSelect">Тип на студенти</label>
+								<select name="studentSelect" id="studentSelect">
+									<option value="" selected="true" disabled="disabled" hidden>
+										Изберете тип на студент
+									</option>
+									<option value="MarketingS">Студенти од маркетинг</option>
+									<option value="CodingS">Студенти од програмирање</option>
+									<option value="dataScienceS">Студенти од data science</option>
+									<option value="designS">Студенти од дизајн</option>
+								</select>
+								<div class="error"></div>
+							</li>
+							<li>
+								<button type="submit">ИСПРАТИ</button>
+								<div class="error"></div>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</main>
+
+			<footer>
+				<span
+					>Изработено со <i class="fa-solid fa-heart"></i> од студентите на
+					Brainster</span
+				>
+			</footer>
+		</div>
+		<script src="./javaScript/formValidaiton.js"></script>
+	</body>
+</html>
