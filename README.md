@@ -5,6 +5,7 @@ Brainster Labs is a website where can be uploaded projects of the Brainster stud
 
 ## Technologies
 * HTML
+* CSS
 * SCSS
 * JavaScript
 
