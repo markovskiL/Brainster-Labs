@@ -1,2 +1,10 @@
-# 01-Brainster-Website
-Projects I created while studying at the Brainster Front-end Academy
+# Project - Brainster-Labs
+
+## Description
+Brainster Labs is a website where can be uploaded projects of the Brainster students from all the academies.
+
+## Technologies
+* HTML
+* SCSS
+* JavaScript
+
